@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { FiLogOut, FiUser } from "react-icons/fi";
-import { CircleUserRound } from "lucide-react";
 
 import useAuth from "../../hooks/useAuth";
 import {
