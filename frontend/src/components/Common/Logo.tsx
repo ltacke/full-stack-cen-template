@@ -11,7 +11,7 @@ export const Logo = ({ className, logoSize = "md", logoOnly = false }: LogoProps
   const { actualTheme } = useTheme();
 
   return (
-    <div className={cn("flex items-center justify-center text-3xl sm:text-4xl", className)}>
+    <div className={cn("flex items-center justify-center text-xl", className)}>
       <img
         className={cn({
           "w-8": logoSize === "sm",

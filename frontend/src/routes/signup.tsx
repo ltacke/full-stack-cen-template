@@ -48,7 +48,7 @@ function SignUp() {
           onSubmit={form.handleSubmit(onSubmit)}
           className="mx-auto flex min-h-[100dvh] max-w-sm flex-col justify-center space-y-6 p-4"
         >
-          <Logo />
+          <Logo className="w-full" />
 
           <FormField
             control={form.control}
@@ -81,7 +81,7 @@ function SignUp() {
                   <Input
                     {...field}
                     placeholder="Email"
-                    className={fieldState.error ? "border-red-500" : ""}
+                    className={fieldState.error ? "border-cds-text-error" : ""}
                   />
                 </FormControl>
                 <FormMessage />
@@ -100,7 +100,7 @@ function SignUp() {
                     {...field}
                     type="password"
                     placeholder="Password"
-                    className={fieldState.error ? "border-red-500" : ""}
+                    className={fieldState.error ? "border-cds-text-error" : ""}
                   />
                 </FormControl>
                 <FormMessage />

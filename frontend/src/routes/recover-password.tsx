@@ -62,7 +62,7 @@ function RecoverPassword() {
         onSubmit={handleSubmit(onSubmit)}
         className="mx-auto flex min-h-[100dvh] max-w-sm flex-col justify-center space-y-6 p-4"
       >
-        <Logo />
+        <Logo className="w-full" />
 
         <h1 className="text-center text-2xl font-semibold">Password Recovery</h1>
         <p className="text-center">

@@ -54,7 +54,7 @@ function Login() {
     <div className="mx-auto flex min-h-[100dvh] max-w-sm flex-col justify-center p-4">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-4">
-          <Logo className="mb-3 w-full !text-xl" />
+          <Logo className="mb-3 w-full" />
           <FormField
             control={form.control}
             name="username"
@@ -70,6 +70,7 @@ function Login() {
                     label="Email"
                     placeholder="Email"
                     className={fieldState.error ? "border-cds-text-error" : ""}
+                    tabIndex={1}
                   />
                 </FormControl>
                 <FormMessage />
@@ -88,7 +89,7 @@ function Login() {
                   <>
                     <div className="flex justify-between">
                       <Label className="text-xs text-cds-text-secondary">Password</Label>
-                      <Link to="/recover-password" className="text-xs">
+                      <Link to="/recover-password" className="text-xs" tabIndex={6}>
                         Forgot password?
                       </Link>
                     </div>
@@ -97,6 +98,7 @@ function Login() {
                       type={show ? "text" : "password"}
                       placeholder="Password"
                       className={fieldState.error ? "border-cds-text-error" : ""}
+                      tabIndex={2}
                     />
                     <Button
                       variant={"ghost"}
@@ -104,6 +106,7 @@ function Login() {
                       type="button"
                       className="absolute right-0 top-6 !m-0 h-10 w-10 hover:bg-transparent"
                       onClick={() => setShow(!show)}
+                      tabIndex={3}
                     >
                       {show ? <BsEyeSlash /> : <BsEye />}
                     </Button>
@@ -114,9 +117,14 @@ function Login() {
               </FormItem>
             )}
           />
-          <Button type="submit">{form.formState.isSubmitting ? "loading..." : "Log In"}</Button>
+          <Button type="submit" tabIndex={4}>
+            {form.formState.isSubmitting ? "loading..." : "Log In"}
+          </Button>
           <div className="flex w-full justify-center gap-2">
-            Don't have an account? <Link to="/signup">Sign up</Link>
+            Don't have an account?{" "}
+            <Link tabIndex={5} to="/signup">
+              Sign up
+            </Link>
           </div>{" "}
         </form>
       </Form>
