@@ -65,4 +65,6 @@ The steps should be performed in this exact order.
 
 asdfawe
 
+## Adminer
+
 ## Setup a Deployment Hook
